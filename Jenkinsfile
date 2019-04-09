@@ -14,6 +14,9 @@ pipeline {
           sh 'node --version'
           sh 'ls -lha'
         }
+        container('maven') {
+          sh 'mvn -version'
+        }
       }
     }
     stage('Build and Push Image') {
