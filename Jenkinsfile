@@ -9,6 +9,7 @@ pipeline {
       steps {
         checkout scm
         sh 'ls -lha'
+        sh 'node --version'
         container('nodejs') {
           echo 'Hello World!'   
           sh 'node --version'
