@@ -8,10 +8,11 @@ pipeline {
     stage('Test') {
       steps {
         checkout scm
-        sh 'java -version'
+        sh 'ls -lha'
         container('nodejs') {
           echo 'Hello World!'   
           sh 'node --version'
+          sh 'ls -lha'
         }
       }
     }
